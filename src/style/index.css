@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f6f8fc;
+}
+.pokemons {
+  width: 100%;
+}
+.pokemons-sidebar {
+  max-width: 800px;
+  width: 100%;
+}

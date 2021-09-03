@@ -1,0 +1,57 @@
+.cardbox {
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  border: 1px solid transparent;
+  margin-top: 40px;
+}
+
+.pokeCard {
+  box-shadow: 10px 8px 15px 5px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  margin: auto;
+  border: 1px solid transparent;
+  width: 200px;
+  height: 180px;
+
+  margin-top: 31px;
+  text-align: center;
+  border-radius: 8px;
+}
+.name {
+  margin-top: 10px;
+  color: #0e1f3b;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.id {
+  margin-top: 40px;
+  color: #9ba6aa;
+  font-weight: 700;
+}
+
+.type {
+  width: 150px;
+  margin: auto;
+  background: #a9ee88;
+  padding: 10px;
+  border-radius: 8px;
+  color: #226011;
+  margin-top: 10px;
+}
+.img {
+  text-align: center;
+
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  max-width: 100px;
+  height: 60px;
+}
+
+img {
+  height: 100%;
+}
