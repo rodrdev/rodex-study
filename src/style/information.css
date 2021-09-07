@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap");
 * {
   color: #0b1c36;
   font-weight: 700;
@@ -7,10 +8,15 @@
   width: 300px;
   padding: 20px;
   margin: 50px;
+  margin-top: 72px;
   box-shadow: 10px 8px 15px 5px rgba(0, 0, 0, 0.08);
   background: #ffffff;
   text-align: center;
+  border-radius: 20px;
+  position: fixed;
+  text-transform: capitalize;
 }
+
 .pokemon-card {
   width: 150px;
   margin: auto;
@@ -19,28 +25,81 @@
   right: 0;
 }
 
-.evolution {
-  width: 60px;
+.pokemon-id {
+  color: #9fa8b1;
+  margin-top: 20px;
 }
-.abilities {
-  width: 120px;
+.pokemon-name {
+  font-size: 25px;
+}
+
+.pokemon-type {
   padding: 5px;
-  background: #f6f8fa;
-  margin: 10px;
-  border-radius: 40px;
-  border: 1px solid #d6d9e8;
-  color: #24324c;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  background: #a8ee86;
+  color: #ffffff;
 }
-.information {
-  width: 120px;
+
+.title-abilities {
+  color: #1d2b4b;
+  margin-top: 15px;
+}
+
+.pokemon-abilities {
+  margin-top: 10px;
+  border: 1px solid #c0d0de;
   padding: 5px;
-  background: #f6f8fa;
-  margin: 10px;
-  border-radius: 40px;
-  border: 1px solid #d6d9e8;
-  color: #24324c;
+  border-radius: 25px;
+  font-size: 12px;
+  background: #f5f7fb;
+  margin-bottom: 10px;
 }
-.stats {
-  font-size: 10px;
-  margin-left: 20px;
+
+.pokemon-information {
+  margin-top: 10px;
+  background: #f6f8fc;
+  width: 100px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.pokemon-states {
+  width: 32px;
+  height: 32px;
+  margin: auto;
+  border-radius: 50%;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.transform {
+  transform: translateY(40%);
+  color: #f8dded;
+  margin: auto;
+}
+
+.pokemon-stat {
+  font-size: 15px;
+  width: 30px;
+  height: 30px;
+  background: #f6f8fc;
+  margin: auto;
+  border-radius: 50%;
+}
+.hp {
+  background: #df2140;
+}
+
+.atk {
+  background: #fd9251;
+}
+
+.def {
+  background: #1a5caf;
 }

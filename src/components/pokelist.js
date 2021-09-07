@@ -1,12 +1,13 @@
 import "../style/pokelist.css";
 
-function PokeList(props) {
+function PokeList({ pokemon, onClick }) {
   return (
     <div className="cardbox">
       <div className="img">
         <img
+          className="img-h"
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${
-            props.pokemon.url.split("/")[6]
+            pokemon.url.split("/")[6]
           }.gif`}
           alt=""
         />
@@ -15,14 +16,16 @@ function PokeList(props) {
       <div className="pokeCard">
         <div className="id">
           #
-          {props.pokemon.url.split("/")[6] < 10
-            ? "00" + props.pokemon.url.split("/")[6]
-            : props.pokemon.url.split("/")[6] < 100
-            ? "0" + props.pokemon.url.split("/")[6]
-            : props.pokemon.url.split("/")[6]}
+          {pokemon.url.split("/")[6] < 10
+            ? "00" + pokemon.url.split("/")[6]
+            : pokemon.url.split("/")[6] < 100
+            ? "0" + pokemon.url.split("/")[6]
+            : pokemon.url.split("/")[6]}
         </div>
-        <div className="name">{props.pokemon.name}</div>
-        <button className="type">Saiba mais...</button>
+        <div className="name">{pokemon.name}</div>
+        <div onClick={onClick} className="type">
+          Saiba mais...
+        </div>
       </div>
     </div>
   );

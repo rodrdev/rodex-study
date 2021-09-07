@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
-  const [clickedPokemon, setClickedPokemon] = useState(null);
+  const [clickedPokemon, setClickedPokemon] = useState(1);
   const pokemonData = true;
   const getPokemons = async () => {
     const { data } = await axios.get(
@@ -20,12 +20,14 @@ function App() {
     getPokemons();
   }, []);
 
+  const getClickedPokemon = (id) => {
+    setClickedPokemon(id);
+    console.log(id);
+  };
+
   return (
     <>
-      <div
-        className="container"
-        style={{ border: "1px solid red", maxWidth: "1250px" }}
-      >
+      <div className="container" style={{ maxWidth: "1250px" }}>
         <div className="row">
           <div className="col-auto">
             <div className={pokemonData ? "pokemons-sidebar" : "pokemons"}>
@@ -37,14 +39,19 @@ function App() {
                     }  `}
                     key={pokemon.name}
                   >
-                    <PokeList pokemon={pokemon} />
+                    <PokeList
+                      pokemon={pokemon}
+                      onClick={() =>
+                        getClickedPokemon(pokemon.url.split("/")[6])
+                      }
+                    />
                   </div>
                 ))}
               </div>
             </div>
           </div>
           {clickedPokemon && (
-            <div className="col">
+            <div className="col" style={{ position: "relative" }}>
               <InformationPokemon id={clickedPokemon} />
             </div>
           )}

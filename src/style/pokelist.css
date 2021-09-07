@@ -40,6 +40,7 @@
   border-radius: 8px;
   color: #226011;
   margin-top: 10px;
+  cursor: pointer;
 }
 .img {
   text-align: center;
@@ -52,6 +53,6 @@
   height: 60px;
 }
 
-img {
+.img-h {
   height: 100%;
 }
